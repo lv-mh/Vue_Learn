@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vueApp</title>
+    <!-- <script src="https://unpkg.com/vue"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+    <style>
+        .active{
+            color: red;}
+    </style>
+</head>
+<body>
+ <div class="a" v-bind:class="{ active: isActive }">Test</div>
+
+
+<script>
+    var vm = new Vue({
+        el:".a",
+        data: {
+            isActive: true
+        }
+    })
+
+</script>
+</body>
+</html>

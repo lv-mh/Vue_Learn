@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vueApp</title>
+    <!--<script src="https://unpkg.com/vue"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+       <h2>{{message}}</h2>
+   </div>
+
+   <div id="app-2">
+        <span v-bind:title="message">
+            鼠标悬停动态显示
+        </span>
+   </div>
+
+   <div id="app-3">
+        <p v-if="seen">你看到我了
+        </p>
+   </div>
+
+   <div id="app-4">
+       <ol>
+           <li v-for="todo in todos">
+               {{todo.text}}
+           </li>
+       </ol>
+   </div>
+
+   <div id="app-5">
+       <h2>{{message}}</h2>
+       <button v-on:click="reverseMessage">reverse</button>
+   </div>
+
+   <div id="app-6">
+       <h2>{{message}}</h2>
+       <input v-model="message">
+   </div>
+
+   <script src="../jses/index.js"></script>
+</body>
+</html>
