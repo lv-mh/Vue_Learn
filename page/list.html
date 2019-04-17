@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-list</title>
+    <!--<script src="https://unpkg.com/vue"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="example">
+ <ul>
+     <li v-for="item in items">{{item.message}}</li>
+ </ul>
+</div>
+
+<div id="example-2">
+    <ul>
+        <li v-for="(item,index) in items">{{parent}}--{{index}}-{{item.message}}</li>
+    </ul>
+</div>
+
+<ul id="v-for-object" class="demo">
+    <li v-for="(value, key) in object">
+        {{ key }}---{{ value }}
+    </li>
+</ul>
+
+<script src="../jses/list.js"></script>
+</body>
+</html>
