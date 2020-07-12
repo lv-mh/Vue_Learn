@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <!--<script src="https://unpkg.com/vue"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input v-model="message">
+    <input :value="message" @input="message" />
+    <p>The input value is : {{message}}</p>
+</div>
+
+
+<script>
+    window.onload=function() {
+      new Vue({
+        el:"#app",
+        data:{
+          message:"Hello Vue"
+        }
+      });
+    }
+</script>
+</body>
+</html>

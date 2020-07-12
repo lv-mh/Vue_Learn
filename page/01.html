@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <!--<script src="https://unpkg.com/vue"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p v-once>{{msg}}</p>
+    <p v-html="ahtml"></p>
+    <p>{{number + 10}}</p>
+     
+  </div>
+
+
+  <script>
+    var add = function (m) {
+      console.info(m)
+    
+    var temp = function (n) {
+        return add(m + n);
+    }
+
+    temp.toString = function () {
+        console.info("tostring")
+        return m;
+    }
+
+    return temp;
+    };
+
+    console.info(add(2)(3)(4));
+
+    var data = {
+      msg: "hi vue",
+      ahtml: "<span>it is a good time</span>",
+      number:1
+    };
+    var vm = new Vue({
+      el: "#app",
+      data: data,
+      beforeCreate() {
+        console.info("beforeCreate");
+      },
+      created() {
+        console.info("Create")
+      },
+      beforeMount() {
+        console.info("beforeMount")
+      },
+      mounted() {
+        console.info("mounted")
+      },
+      beforeUpdate() {
+        console.info("beforeUpdate")
+      },
+      updated() {
+        console.info("updated")
+      },
+      beforeDestroy() {
+        console.info("beforeDestroy")
+      },
+      destroyed() {
+        console.info("destroyed")
+      }
+    });
+    //vm.a = "test";
+    //vm.b="2";
+    vm.msg = "what"
+    vm.$watch("a",function(newv,oldv){
+      console.info(newv);
+    })
+    //alert(data.a == vm.a);
+    console.info(data.a == vm.a);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<body>
+    <div id="app">
+    <input type="text" id="txt">
+    <p id="show"></p>
+</div>
+</body>
+<script type="text/javascript">
+    var obj = {}
+    Object.defineProperty(obj, 'txt', {
+        // get: function () {
+        //    console.info('get')
+        //    return 'l';
+        // },
+        set: function (newValue) {
+            console.info('set')
+            document.getElementById('txt').value = newValue
+            document.getElementById('show').innerHTML = newValue
+        }
+    })
+    document.addEventListener('keyup', function (e) {
+        obj.txt = e.target.value
+        console.info(obj.txt);
+    })
+
+   
+</script>
