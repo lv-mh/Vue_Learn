@@ -1,10 +1,7 @@
 var example = new Vue({
     el:"#example",
     data:{
-        items:[
-            {message:"A"},
-            {message:"B"}
-        ]
+        movies:['少年派','星际穿越']
     }
 })
 

@@ -18,10 +18,33 @@ var add = function (m) {
 console.log(add(2)(3)(4).toString());
 
 
-for (var i = 0; i < 5; i++) {
+/*for (var i = 0; i < 5; i++) {
     setTimeout(function () {
        console.log(i++);
     },4000)
 
 }
-console.log(i);
+console.log(i);*/
+
+function a(){
+    var myVar=2;
+    b();
+    function b(){
+        console.log(myVar);
+    }
+}
+var myVar=1;
+a();
+
+var d;
+d = null;
+console.info(d,typeof d);
+
+var b1 = {
+    b2 : [1,"a",console.log],
+    b3 : function () {
+        console.log("b3");
+    }
+}
+
+console.log(typeof b1.b2[2])
