@@ -27,4 +27,6 @@ var example3 = new Vue({
     }
 })
 
-example3.object.firstName = "jack1"
+example3.object.firstName = "jack"
+
+example.movies.push('八百');
